@@ -51,7 +51,7 @@ get_route.get('/get-data', admincontroller.getdetail);
 get_route.get('/get-databyid/:id', admincontroller.getdetailbyid);
 get_route.post('/post-data', admincontroller.insertproduct);
 get_route.post('/status',  admincontroller.statusupdate);
-
+get_route.post('/status/:id',  admincontroller.statusupdate);
 
 
 module.exports= get_route;

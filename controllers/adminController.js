@@ -97,12 +97,12 @@ const insertproduct = async (req, res) => {
 }
 
 
-// update data
+// update status
 const statusupdate = async (req, res) => {
     try {
 
        
-        const id = req.body.id;
+        const id = req.body.id || req.params.id;
         
 
         const data = await adminmodel.findOne({ _id: id });
@@ -127,6 +127,7 @@ const statusupdate = async (req, res) => {
         res.status(400).send(error.message);
     }
 }
+
 
 
 module.exports = {
